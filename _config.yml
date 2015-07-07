@@ -1,0 +1,27 @@
+# Site settings
+title: PellePilot
+email: info@pellepilot.se
+url: http://pellepilot.se
+description: "PellePilot är en av Transportstyrelsen godkänd flygskola och erbjuder utbildning till privatflygcertifikat samt mörkerbehörighet. Vi har också tillstånd att bedriva utbildning i avancerad flygning."
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#8D7154'
+
+# Footer settings
+footer: PellePilot
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://www.twitter.com/pellepilot
+  - title: facebook
+    url: https://www.facebook.com/pellepilotAB
+  - title: instagram
+    url: https://www.instagram.com/pellepilot
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty

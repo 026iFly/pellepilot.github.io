@@ -1,0 +1,36 @@
+<!-- Main Section -->
+<section id="pellepilot" class="container content-section">
+    
+  <div class="row">
+      <div class="col-lg-8">
+          <h2>Om PellePilot</h2>
+          <p>Vår flygskola håller hög kvalitet till rätt pris. Flygutbildningen du får hos oss är en bra start på din fortsatta pilotkarriär eller som privat flygare, oavsett ger våra erfarna instruktörer dig en bra grundutbildning att bygga vidare på.</p>
+            <p>Vi har alla en gemensam dröm att kunna flyga.</p>
+            <p>Flygskolan ligger strategiskt bra till för flygutbildning då banan är lång och relativt otraffikerad. Vi har även möjlighet att skola både IR och mörker här på hemmaflygplatsen.</p>
+            <p>Vi kan uppfylla din dröm oavsett om den yttrats sig i att Du själv vill lära sig flyga eller om Du endast vid något tillfälle vill få komma upp och se Din omgivning från ett nytt perspektiv.</p>
+      </div>
+      
+      <div class="col-lg-4">
+            <h2>Prova på</h2>
+            <p>Om du går i tankar på att lära dig flyga, börja med en prova-på lektion! Under cirka en timme med en av våra flyglärare får du följa med upp i luften och känna hur det känns att spaka ett flygplan själv.</p>
+            <p>Kontakta oss och boka in en tid med en gång!</p>
+      </div>
+    </div> <!--/row-->
+    
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Kontakt</h2>
+            <p>Välkommen att kontakta oss om du har några frågor eller funderingar.</p>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </p>
+            <ul class="list-inline banner-social-buttons">
+                {% for network in site.social %}
+                <li>
+                    <a href="{{ network.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ network.title }} fa-fw"></i> <span class="network-name">{{ network.title }}</span></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div> <!--/row-->
+
+</section>

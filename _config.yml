@@ -7,7 +7,7 @@ description: "PellePilot är en av Transportstyrelsen godkänd flygskola och erb
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary-dark: '#000000'
-  links: '#8D7154'
+  links: '#a58c64'
 
 # Footer settings
 footer: PellePilot

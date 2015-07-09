@@ -1,8 +1,8 @@
 <!-- Main Section -->
-<section id="pellepilot" class="container content-section">
+<section id="main" class="container content-section">
     
-  <div class="row">
-      <div class="col-lg-8">
+  <div class="row top-row">
+      <div class="col-lg-8 om-oss">
           <h2>Om PellePilot</h2>
           <p>Vår flygskola håller hög kvalitet till rätt pris. Flygutbildningen du får hos oss är en bra start på din fortsatta pilotkarriär eller som privat flygare, oavsett ger våra erfarna instruktörer dig en bra grundutbildning att bygga vidare på.</p>
             <p>Vi har alla en gemensam dröm att kunna flyga.</p>
@@ -10,16 +10,16 @@
             <p>Vi kan uppfylla din dröm oavsett om den yttrats sig i att Du själv vill lära sig flyga eller om Du endast vid något tillfälle vill få komma upp och se Din omgivning från ett nytt perspektiv.</p>
       </div>
       
-      <div class="col-lg-4">
+      <div class="col-lg-4 prova-pa">
             <h2>Prova på</h2>
             <p>Om du går i tankar på att lära dig flyga, börja med en prova-på lektion! Under cirka en timme med en av våra flyglärare får du följa med upp i luften och känna hur det känns att spaka ett flygplan själv.</p>
             <p>Kontakta oss och boka in en tid med en gång!</p>
       </div>
     </div> <!--/row-->
     
-    <div class="row">
+    <div class="row kontakt">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>Kontakt</h2>
+            <h2>Kontakta oss</h2>
             <p>Välkommen att kontakta oss om du har några frågor eller funderingar.</p>
             <p><a href="mailto:{{ site.email }}">{{ site.email }}</a>
             </p>
@@ -32,5 +32,49 @@
             </ul>
         </div>
     </div> <!--/row-->
+    
+    <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name</label>
+                                <input type="text" class="form-control" placeholder="Namn" id="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email Adress" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="Telefon" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Message</label>
+                                <textarea rows="5" class="form-control" placeholder="Meddelande" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Skicka</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
 </section>

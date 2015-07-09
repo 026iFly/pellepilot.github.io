@@ -4,12 +4,14 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+
 body {
     width: 100%;
     height: 100%;
     font-family: 'Lato',Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-color: {{ site.color.primary-dark }};
+    background-color: lightskyblue;
 }
 
 html {
@@ -26,7 +28,7 @@ h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
     font-family: 'Lato',Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 900;
+    font-weight: 100;
     letter-spacing: 1px;
 }
 
@@ -35,6 +37,7 @@ p {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.5;
+    text-rendering: optimizeLegibility;
 }
 
 @media(min-width:767px) {
@@ -59,16 +62,38 @@ a:focus {
 }
 
 @media screen and (max-width: 768px) {
-    #pellepilot {
+    #main {
         margin: 0 15px;
     }
 }
 
-#pellepilot {
-    background-color: white;
+#main {
     color: #222;
     font-weight: 300;
 }
+
+.om-oss, .prova-pa, .kontakt {
+    padding: 30px;
+}
+
+.om-oss {
+    background-color: #fff;
+}
+
+.prova-pa {
+    background-color: {{ site.color.links }};
+    color: white;
+}
+
+.top-row {
+    background-color: {{ site.color.links }};
+    box-shadow: 0 3px black;
+}
+
+.kontakt {
+    background-color: #f7f7f7;
+}
+
 
 .light {
     font-weight: 400;
@@ -166,6 +191,7 @@ a:focus {
 
 .intro .intro-body .brand-heading {
     font-size: 40px;
+    font-weight: 900;
 }
 
 .intro .intro-body .intro-text {
@@ -262,7 +288,8 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .download-section {
@@ -285,7 +312,8 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 200px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 
     .download-section {
@@ -349,6 +377,7 @@ ul.banner-social-buttons li {
 
 footer {
     padding: 50px 0;
+    background-color: {{ site.color.primary-dark }};
 }
 
 footer p {

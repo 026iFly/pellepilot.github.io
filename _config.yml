@@ -1,6 +1,6 @@
 # Site settings
 title: PellePilot
-email: info@pellepilot.se
+email: pelle@pellepilot.com
 url: http://pellepilot.se
 description: "PellePilot är en av Transportstyrelsen godkänd flygskola och erbjuder utbildning till privatflygcertifikat samt mörkerbehörighet. Vi har också tillstånd att bedriva utbildning i avancerad flygning."
 
@@ -15,11 +15,11 @@ footer: PellePilot
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: https://www.twitter.com/pellepilot
+    url: https://www.twitter.com/pellepilotab
   - title: facebook
     url: https://www.facebook.com/pellepilotAB
   - title: instagram
-    url: https://www.instagram.com/pellepilot
+    url: https://www.instagram.com/pellepilotab
 
 
 # Build settings

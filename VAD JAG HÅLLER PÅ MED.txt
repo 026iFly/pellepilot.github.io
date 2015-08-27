@@ -1,0 +1,7 @@
+
+onepage scroll
+
+https://github.com/peachananr/onepage-scroll
+
+lägg bara in rätt class på alla sections. scriptan och det är inlagda.
+<section class=”page1”>

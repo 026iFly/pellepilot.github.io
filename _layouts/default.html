@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    {% include header.html %}
-    {% include pellepilot.html %}
+{% include head.html %}
+<body>
+        
+    <div class="wrapper"><div class="main">
+        <section class="page1">
+    {% include section1.html %}
+        </section>
+        <section class="page2">
+    {% include section2.html %}
+        </section>
+        <section class="page3">
+    {% include section3.html %}
+        </section>
+    </div></div>
     {% include footer.html %}
     {% include js.html %}
-    </body>
+</body>
 </html>

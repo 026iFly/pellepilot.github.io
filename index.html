@@ -81,10 +81,20 @@
           width: 100%;
         }
         
+        .byline{
+            color: rgba(255,255,255,0.4);
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .byline a {
+            color: rgba(255,255,255,0.5);
+        }
+        
     </style>
 </head>
 <body>
-
 <div class="wrap">
     <img src="/img/logo.png" class="img-responsive center-block">
     
@@ -129,19 +139,24 @@
 </div>
 
 <div class="hidden-xs">
-    <img src="/img/plane.png" class="hidden">
     <canvas id="sky"></canvas>
+</div>
+    
+<div class="byline">
+    Webbproduktion av <a href="https://webbab.se/" title="Webbproduktion av Webbyrån WEBBAB." target="_blank">Webbyrån WEBBAB</a>.
 </div>
     
 <script src="https://cdn.rawgit.com/artzub/3efd4efcbd8758e4b7e5/raw/0a89298b31b293ed4825b2fc5c54453b5c3101ab/canvas_utils.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
 <script>
-    /**
- * Created by artzub on 08.09.2014.
- */
-
 "use strict";
 
+function getPlaneImage() {
+  var img = new Image();
+  img.src = '/img/plane.png';
+  return img;
+}
+    
 var sky = document.querySelector("#sky")
     , ctx = sky.getContext("2d")
     , w, h
@@ -175,6 +190,7 @@ var sky = document.querySelector("#sky")
     , plane = canvas_utils.colorize(planeImg, settings.planeColor[0], settings.planeColor[1], settings.planeColor[2], 1)
     ;
 
+    
 function generateCloud(w, h) {
     var tempCanvas = document.createElement("canvas");
 
@@ -434,65 +450,8 @@ function appendPlane(from, target) {
     planes.push(new Plane(from.x, from.y, unsigRand(settings.planeSize, settings.planeSizeMin), target));
 }
 
-function hexToRgbArray(value) {
-  return [
-    parseInt(value.substring(1,3),16)
-    , parseInt(value.substring(3,5),16)
-    , parseInt(value.substring(5,7),16)
-  ];
-}
-
-!function() {
-    var gui = new dat.GUI({
-        load : JSON
-        , preset : 'Default'
-    });
-  
-    function onColorChange(value) {
-      console.log(value);
-      if (typeof value === 'string') {
-          value = hexToRgbArray(value);
-      }
-      cloud = canvas_utils.generateNeonBall(32, 32, value[0] | 0, value[1] | 0, value[2] | 0, 1);
-    }
-  
-    function onPlaneColorChange(value) {
-      console.log(value);
-      if (typeof value === 'string') {
-          value = hexToRgbArray(value);
-      }
-      plane = canvas_utils.colorize(planeImg, value[0], value[1], value[2], 1);
-    }
-    
-    var f = gui.addFolder('Particles');
-    f.add(settings, 'maxRadius', 1, 50).step(1).listen();
-    f.add(settings, 'minRadius', 1, 50).step(1).listen();
-    f.add(settings, 'bunch', 0, 50).step(1).listen();
-    f.add(settings, 'particleDisp', 0, 50).step(1).listen();
-    f.add(settings, 'life', 0, 1000).step(10).listen();
-    f.addColor(settings, 'partColor').onChange(onColorChange).listen();
-    
-    
-    f = gui.addFolder('Planes');
-    f.add(settings, 'planeAmount', 1, 50).step(1).listen();
-    f.add(settings, 'planeSize', 1, 50).step(1).listen();
-    f.add(settings, 'planeSizeMin', 1, 50).step(1).listen();
-    f.add(settings, 'planeLife', 0, 1000).step(10).listen();
-    f.addColor(settings, 'planeColor').onChange(onPlaneColorChange).listen();
-    
-    gui.add(settings, 'reset');
-  
-    //gui.add(settings, 'restart');
-    gui.remember(settings);
-}();
 
 anim();
-
-function getPlaneImage() {
-  var img = new Image();
-  img.src = '/img/plane.png';
-  return img;
-}
 
 </script>
     

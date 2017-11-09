@@ -30,7 +30,7 @@
           text-align: right !important;
         }
         
-        img {
+        .img-logo {
             margin-top: 100px;
             padding: 0 10px;
         }
@@ -39,7 +39,7 @@
             .visitkort {
               margin-top: 40px;
             }
-            img {
+            .img-logo {
                 margin-top: 40px;
             }
         }
@@ -58,13 +58,13 @@
         }
         
         
-        canvas, body, html {
+        /*canvas, body, html {
           height : 100%;
           width : 100%;
-          overflow: hidden;
+          /*overflow: hidden;*
           padding : 0;
           margin : 0;
-        }
+        }*/
 
         body {
            background: #a7cfdf; /* Old browsers */
@@ -75,18 +75,19 @@
         }
 
         .dg {display: none;} 
-        .wrap {
+        /*.wrap {
           z-index: 1;
           position: absolute;
           width: 100%;
-        }
+        }*/
         
         .byline{
             color: rgba(255,255,255,0.4);
-            position: absolute;
-            bottom: 20px;
+            /*position: absolute;
+            bottom: 20px;*/
             width: 100%;
             text-align: center;
+            padding: 20px 0;
         }
         .byline a {
             color: rgba(255,255,255,0.5);
@@ -96,7 +97,7 @@
 </head>
 <body>
 <div class="wrap">
-    <img src="/img/logo.png" class="img-responsive center-block">
+    <img src="/img/logo.png" class="img-logo img-responsive center-block">
     
     <div class="container">
         <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 visitkort">
@@ -113,7 +114,7 @@
                     <i class="fa fa-phone"></i>
                 </div>
                 <div class="col-sm-9 col-xs-10">
-                    <a href="tel:0046264561718"><p>+46 (0)26 456 17 18</p></a>
+                    <a href="tel:0046708929068"><p>070-892 90 68</p></a>
                 </div>
             </div>
 
@@ -136,16 +137,78 @@
             </div>
         </div>
     </div>
+       
+    e<div class="container">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 visitkort">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center">Uthyres</h2>
+                </div>
+            </div>
+            <div class="row">
+               
+                <div class="col-sm-6">
+                    <img src="/img/flyttslap.jpg" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-6">
+                    <h4>Flyttsläp</h4>
+                    <p>Totalvikt 1100kg</p>
+                    <p><strong>300 kr/dygn</strong></p>
+                </div>
+                                
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div>
+            
+            <div class="row">
+               
+                <div class="col-sm-6">
+                    <img src="/img/dieselvarmare.jpg" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-6">
+                    <h4>Dieselvärmare 20kw</h4>
+                    <p>230v 160w Bränsleförbrukning ca 2 l/h</p>
+                    <p><strong>200 kr/dygn</strong></p>
+                </div>
+                                
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div>
+            
+            <div class="row">
+               
+                <div class="col-sm-6">
+                    <img src="/img/phantom4.jpg" class="img-responsive center-block">
+                </div>
+                <div class="col-sm-6">
+                    <h4>Dieselvärmare 20kw</h4>
+                    <p>230v 160w Bränsleförbrukning ca 2 l/h</p>
+                    <p><strong>200 kr/dygn</strong></p>
+                </div>
+                                
+            </div>
+        </div>
+    </div>
+    
+    
 </div>
 
-<div class="hidden-xs">
+<!--<div class="hidden-xs">
     <canvas id="sky"></canvas>
-</div>
+</div>-->
     
 <div class="byline">
     Webbproduktion av <a href="https://webbab.se/" title="Webbproduktion av Webbyrån WEBBAB." target="_blank">Webbyrån WEBBAB</a>.
 </div>
-    
+<!--
 <script src="https://cdn.rawgit.com/artzub/3efd4efcbd8758e4b7e5/raw/0a89298b31b293ed4825b2fc5c54453b5c3101ab/canvas_utils.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
 <script>
@@ -454,6 +517,6 @@ function appendPlane(from, target) {
 anim();
 
 </script>
-    
+    -->
 </body>
 </html>
